@@ -1,0 +1,19 @@
+{
+  "name": "purdypoolservices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tester"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PurdyRad/PurdyPoolServices.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PurdyRad/PurdyPoolServices/issues"
+  },
+  "homepage": "https://github.com/PurdyRad/PurdyPoolServices#readme"
+}
