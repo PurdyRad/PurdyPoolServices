@@ -6,7 +6,10 @@ const Home = () => {
         <div>
             <h1>Purdy Pool Services</h1>
             <MessageBoard />
-            <p>Home sweet home</p>
+            <div>
+                {/* <img /> */}
+                <p>Home sweet home</p>
+            </div>
         </div>
     )
 }
