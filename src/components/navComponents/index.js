@@ -8,9 +8,8 @@ import { Nav,
      } from './navBarElements';
 
 const Image = styled.img`
+    display: block;
     border-radius: 5px;
-    width: 8vw;
-    height: 8vh;
 `
 
 
@@ -25,7 +24,7 @@ const NavBar = () => {
                     <NavLink to='/' >Home</NavLink>
                     <NavLink to='/about' >About</NavLink>
                     <NavLink to='/contact' >Contact</NavLink>
-                    <a href='tel:+1-407-792-9604'>Call Now</a>
+                    {/* <a href='tel:+1-407-792-9604'>Call Now</a> */}
                 </NavMenu>
             </Nav>
             </>

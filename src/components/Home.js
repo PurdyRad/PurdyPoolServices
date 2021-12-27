@@ -1,11 +1,17 @@
 import React from 'react';
 import ImageSlider from './ImageSlider';
 import MessageBoard from './MessageBoard';
+import styled from 'styled-components';
+
+const Header = styled.h1`
+font-family: 'Playfair Display SC', serif;
+font-size: 4em;
+`;
 
 const Home = () => {
     return (
         <div>
-            <h1>Purdy Pool Services</h1>
+            <Header>Purdy Pool Services</Header>
             <MessageBoard />
             <ImageSlider />
             <div>
