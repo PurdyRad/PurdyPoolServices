@@ -10,6 +10,42 @@ const initialFormValues = {
     inquiry: ''
 };
 
+const FormHolder = styled.form`
+display: flex;
+flex-direction: column;
+align-content: space-between;
+max-width: 400px;
+margin: 0 auto;
+text-align: center;
+`;
+
+const Label = styled.label`
+text-align: left;
+display: block;
+`;
+
+const Input = styled.input`
+width: 100%;
+padding: 6px 10px;
+margin: 10px 0;
+border: 1px solid #ddd;
+box-sizing: border-box;
+display: block;
+`;
+const Textarea = styled.textarea`
+width: 100%;
+padding: 6px 10px;
+margin: 10px 0;
+border: 1px solid #ddd;
+box-sizing: border-box;
+display: block;
+`;
+
+const Header = styled.h4`
+margin-bottom: 30px;
+font-size: 1.3em;
+`;
+
 const Contact = () => {
     const [formValues, setFormValues] = useState(initialFormValues);
     const [formErrors, setFormErrors] = useState('');
@@ -42,61 +78,52 @@ const Contact = () => {
     };
 
 
-    const FormHolder = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    `;
-
-    const InputDiv = styled.div`
-    padding: 10px;
-    `;
 
     return (
         <div>
-            <h4>If you have any customer service related inquires please feel free to reach out to us. We will get back to you as soon as possible, thank you!</h4>
+            <Header>If you have any customer service related inquires please feel free to reach out to us. We will get back to you as soon as possible, thank you!</Header>
             <FormHolder>
-                <InputDiv>
-                    <label>Your Name *
-                    <input
-                    type='text'
-                    name='name'
-                    value={formValues.name}
-                    onChange={changer}/>
-                        <div>{formErrors.name}</div>
-                    </label>
-                </InputDiv>
-                <InputDiv>
-                    <label>Your Phone Number *
-                    <input
-                    type='text'
-                    name='phoneNumber'
-                    value={formValues.phoneNumber}
-                    onChange={changer}/>
-                        <div>{formErrors.phoneNumber}</div>
-                    </label>
-                </InputDiv>
-                <InputDiv>
-                    <label> Your Email *
-                    <input
-                    type='email'
-                    name='email'
-                    value={formValues.email}
-                    onChange={changer}/>
-                        <div>{formErrors.email}</div>
-                    </label>
-                </InputDiv>
-                <InputDiv>
-                    <label>How can we assist you *
-                    <input
-                    type='text'
-                    name='inquiry'
-                    value={formValues.inquiry}
-                    onChange={changer}/>
-                        <div>{formErrors.inquiry}</div>
+                <div>
+                    <Label>Your Name *
+                        <Input
+                        type='text'
+                        name='name'
+                        value={formValues.name}
+                        onChange={changer}/>
+                    </Label>
+                    <div>{formErrors.name}</div>
+                </div>
+                <div>
+                    <Label>Your Phone Number *
+                        <Input
+                        type='text'
+                        name='phoneNumber'
+                        value={formValues.phoneNumber}
+                        onChange={changer}/>
+                    </Label>
+                    <div>{formErrors.phoneNumber}</div>
+                </div>
+                <div>
+                    <Label> Your Email *
+                        <Input
+                        type='email'
+                        name='email'
+                        value={formValues.email}
+                        onChange={changer}/>
+                    </Label>
+                    <div>{formErrors.email}</div>
+                </div>
+                <div>
+                    <Label>How can we assist you *
+                        <Textarea
+                        type='text'
+                        name='inquiry'
+                        value={formValues.inquiry}
+                        onChange={changer}/>
+                    </Label>
+                    <div>{formErrors.inquiry}</div>
                     <button disabled={disablo}>Submit</button>
-                    </label>
-                </InputDiv>
+                </div>
             </FormHolder>
         </div>
     )

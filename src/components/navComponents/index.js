@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../photos/PurdyPoolLogo.jpeg';
-import { Nav,
-     NavLink,
-     Bars,
-     NavMenu
-     } from './navBarElements';
+import Hamburger from './Hamburger';
+import { useNavigate } from 'react-router-dom';
+
+const Nav = styled.nav`
+    width: 100%;
+    height: 55px;
+    border-bottom: 2px solid #f1f1f1;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+`;
 
 const Image = styled.img`
     display: block;
@@ -15,17 +21,17 @@ const Image = styled.img`
 
 
 const NavBar = () => {
+    let navigate = useNavigate();
+
+    const homer = () => {
+        navigate('/')
+    };
+    
     return (
         <>
             <Nav>
-                <Bars />
-                    <Image src={logo} alt='Purdy Pool Services logo' />
-                <NavMenu>
-                    <NavLink to='/' >Home</NavLink>
-                    <NavLink to='/about' >About</NavLink>
-                    <NavLink to='/contact' >Contact</NavLink>
-                    {/* <a href='tel:+1-407-792-9604'>Call Now</a> */}
-                </NavMenu>
+                <Image src={logo} onClick={homer} alt='Purdy Pool Services logo' />
+                <Hamburger />
             </Nav>
             </>
     )

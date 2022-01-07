@@ -11,16 +11,16 @@
 }
 
 .image {
-  width: 60vw;
-  height: 60vh;
+  width: 75vw;
+  height: 75vh;
   border-radius: 10px;
 }
 
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 32px;
-  font-size: 3rem;
+  right: 50px;
+  font-size: 2rem;
   color: #000;
   z-index: 10;
   cursor: pointer;
@@ -30,8 +30,8 @@
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 32px;
-  font-size: 3rem;
+  left: 50px;
+  font-size: 2rem;
   color: #000;
   z-index: 10;
   cursor: pointer;
@@ -39,7 +39,7 @@
 }
 
 .slide {
-  opacity: 0;
+  opacity: .8;
   transition-duration: 1s ease;
 }
 
